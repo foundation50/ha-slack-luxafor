@@ -1,0 +1,29 @@
+name: "Slack Luxafor"
+version: "0.1.0"
+slug: "slack_luxafor"
+description: "Shows Slack channel activity on a Luxafor Signal"
+startup: application
+boot: auto
+init: false
+
+arch:
+  - amd64
+  - aarch64
+
+options:
+  slack_app_token: null
+  slack_channel_id: null
+  slack_mention_user_ids: ""
+  luxafor_url: null
+  luxafor_token: null
+  yellow_duration_seconds: 30
+  red_duration_seconds: 30
+
+schema:
+  slack_app_token: password
+  slack_channel_id: str
+  slack_mention_user_ids: str
+  luxafor_url: str
+  luxafor_token: password
+  yellow_duration_seconds: "int(1,3600)"
+  red_duration_seconds: "int(1,3600)"
